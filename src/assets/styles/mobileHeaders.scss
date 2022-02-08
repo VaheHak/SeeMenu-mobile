@@ -1,0 +1,56 @@
+.mobileHeaders {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 0 3px 0 #ececec;
+  align-items: center;
+  position: fixed;
+  background: #fcfcfc;
+  z-index: 1;
+  padding: 15px 10px;
+
+  .restaurantName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      font-size: 24px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .seeMenuLogo {
+    width: 11%;
+
+    a {
+      text-decoration: none;
+
+      img {
+        width: 90px;
+        object-fit: cover;
+        height: auto;
+      }
+    }
+  }
+
+  .languageBlock {
+    width: 16%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .mobileHeaders .languageBlock {
+    width: 22%;
+  }
+  .mobileHeaders .restaurantName a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .mobileHeaders .languageBlock {
+    width: 25%;
+  }
+}

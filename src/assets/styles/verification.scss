@@ -1,0 +1,79 @@
+.verification {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .iconCancelBlock {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .verificationText {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: red;
+
+    span {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 120px;
+      height: 45px;
+      background: red;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: white;
+      color: red;
+    }
+  }
+
+  .iconCheckCircleOutlineBlock{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .verificationOkText{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: green;
+
+    span {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 120px;
+      height: 45px;
+      background: green;
+      color: white;
+      border: 1px solid white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: white;
+      color: green;
+    }
+  }
+}

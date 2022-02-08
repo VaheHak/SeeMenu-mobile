@@ -1,0 +1,84 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  background: #fcfcfc;
+  z-index: 3;
+  padding: 10px 10px;
+  bottom: 0;
+  box-shadow: 0px -4px 50px rgba(0, 0, 0, 0.08);
+
+
+  .iconsBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    .MuiSvgIcon-root {
+      color: #ef795a;
+      height: 1.1em;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      text-decoration: none;
+
+      p {
+        font-family: Segoe UI, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 17px;
+        color: #787878;
+      }
+    }
+
+    p {
+      font-family: Segoe UI, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 17px;
+      color: #787878;
+    }
+  }
+}
+
+.closeCart {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .openCart {
+    width: 100%;
+    height: 71%;
+    background: #ffffff;
+    position: absolute;
+    top: 25%;
+    transition: all 0.4s;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(0);
+    z-index: 2000;
+    box-shadow: 0px -11px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 47px 47px 0 0;
+    left: 0;
+
+    & .closeIng {
+      transform: translateY(100%);
+    }
+  }
+}

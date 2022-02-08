@@ -1,0 +1,328 @@
+.arrowTop {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  height: 5px;
+  margin-bottom: 10px;
+
+  span {
+    display: flex;
+    width: 30px;
+    height: 4px;
+    background: #cccccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.4s;
+
+    &:nth-child(1) {
+      transform: rotate(150deg);
+      right: -3px;
+    }
+
+    &:nth-child(2) {
+      left: -3px;
+      transform: rotate(-150deg);
+
+    }
+  }
+
+  &:hover,
+  &.active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(180deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-180deg);
+
+      }
+    }
+  }
+}
+
+
+.text_block {
+  width: 100%;
+}
+
+
+.block__img {
+  width: 100%;
+  height: 43vh;
+  position: sticky;
+  top: 70px;
+
+  .restLogo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+.homeImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.timing {
+  font-size: 15px;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 125px;
+  right: 20px;
+  border-radius: 25px;
+  background: rgba(239, 121, 90, 0.7);
+  padding: 6px;
+}
+
+
+.text_block {
+  background: #FDFDFD;
+  box-shadow: 0 -3px 8px 4px rgba(0, 0, 0, 0.69);
+  position: sticky;
+  z-index: 2;
+  overflow-y: auto;
+  height: 75vh;
+  overflow-x: hidden;
+  border-radius: 47px 47px 0 0;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+  }
+}
+
+.text_block__top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
+
+.text {
+  margin-top: 18px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.block__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+
+  li {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    list-style: none;
+    margin: 30px 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    p {
+      font-size: 20px;
+      color: #1f1e1e;
+      margin-top: 8px;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.address {
+  font-size: 15px;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 85px;
+  right: 20px;
+  border-radius: 25px;
+  background: rgba(239, 121, 90, 0.7);
+  padding: 6px;;
+}
+
+
+.phone {
+  font-size: 15px;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 90px;
+  left: 20px;
+  border-radius: 25px;
+  background: rgba(239, 121, 90, 0.7);
+  padding: 6px;
+}
+
+
+.modal1 {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0 / 88%) !important;
+  z-index: 999;
+
+
+  .ReactModal__Content {
+    transform: translate(-50%, -50%);
+    border: 0 !important;
+    width: 50%;
+    height: 470px;
+    padding: 0 !important;
+    top: 50% !important;
+    left: 50% !important;
+  }
+}
+
+.icon__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+
+  li {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 55%;
+
+
+    span {
+      font-size: 26px;
+      line-height: 50px;
+      margin-left: 35px;
+      color: #191b1d;
+      font-weight: 500;
+      font-family: "Lato", sans-serif;
+    }
+  }
+
+  img {
+    width: 21%;
+    object-fit: cover;
+  }
+}
+
+.lang__image {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.langImageBlock {
+  display: flex;
+
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .menu__cate ul li a {
+    font-size: 16px !important;
+  }
+
+  .icon__block li {
+    margin-left: 40%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .block__item {
+    li {
+      width: 140px;
+      height: 140px;
+    }
+  }
+  p {
+    text-decoration: none;
+
+    img {
+      width: 145px !important;
+      height: 120px !important;
+    }
+  }
+}
+
+.modal1 .ReactModal__Content {
+  width: 70%;
+}
+
+@media only screen and (max-width: 425px) {
+  .block__item {
+    display: flex;
+    align-items: end;
+    a {
+      li {
+        img {
+          width: 100%;
+          height: 80%;
+        }
+      }
+    }
+  }
+  li {
+    p {
+      img {
+        width: 145px !important;
+        height: 120px !important;
+      }
+    }
+  }
+  .block__img .restLogo {
+    width: 80px;
+    height: 80px;
+  }
+  .modal1 .ReactModal__Content {
+    width: 80%;
+    height: 340px;
+  }
+  .icon__block li {
+    margin-left: 45%;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .icon__block li {
+    margin-left: 40%;
+  }
+}

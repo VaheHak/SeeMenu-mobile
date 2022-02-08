@@ -1,0 +1,224 @@
+.clientRegistration {
+  width: 100%;
+  overflow: hidden;
+
+  .backBlock {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+
+  .registrationImageBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    img {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .registrationInputsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      color: red;
+      margin-top: 15px;
+    }
+
+    .registrationTextInputs {
+      width: 505px;
+      height: 45px;
+      margin-top: 30px;
+      border: none;
+      outline: none;
+      box-shadow: 5px 0 9px 8px #ececec;
+      border-radius: 6px;
+      padding-left: 10px;
+      font-size: 17px;
+    }
+
+    button {
+      width: 135px;
+      height: 55px;
+      background: #ef795a;
+      color: #FEFFFF;
+      cursor: pointer;
+      border: none;
+      font-size: 22px;
+      border-radius: 10px;
+      margin-top: 25px;
+    }
+
+    button:active {
+      background: #FEFFFF;
+      color: #ef795a;
+      box-shadow: 1px 2px 2px 2px;
+    }
+
+    p {
+      font-size: 14px;
+      color: red;
+      height: 0;
+    }
+  }
+
+  .usingText {
+    text-align: center;
+  }
+
+  .signInBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    span {
+      text-decoration: none;
+      font-size: 24px;
+    }
+  }
+
+  .iconsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    button {
+      margin-right: 30px;
+    }
+  }
+}
+
+.modal3 {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  z-index: 999;
+
+  .ReactModal__Content {
+    transform: translate(-50%, -50%);
+    border: 1px !important;
+    width: 55%;
+    height: 35%;
+    padding: 0 !important;
+    top: 50% !important;
+    left: 50% !important;
+  }
+}
+
+.okModalOne:active {
+  background: #9c5632;
+}
+
+.textBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  p {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .okModalOne {
+    width: 130px !important;
+    height: 50px !important;
+    border: 1px solid #80B1FF;
+    cursor: pointer;
+    background: #80B1FF;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .textBlock p {
+    font-size: 20px;
+  }
+  .textBlock .okModalOne {
+    width: 115px !important;
+    height: 40px !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .clientRegistration .registrationImageBlock img {
+    width: 400px;
+    height: 200px;
+  }
+  .clientRegistration .registrationInputsBlock .registrationTextInputs {
+    width: 400px;
+  }
+  .clientRegistration .registrationInputsBlock button {
+    width: 125px;
+    height: 50px;
+    font-size: 19px;
+  }
+  .clientRegistration .signInBlock span {
+    font-size: 20px;
+  }
+  .modal3 .ReactModal__Content {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .clientRegistration .registrationImageBlock img {
+    width: 370px;
+    height: 185px;
+    margin-top: 10px;
+  }
+  .clientRegistration .registrationInputsBlock .registrationTextInputs {
+    width: 370px;
+  }
+  .clientRegistration .registrationInputsBlock button {
+    width: 115px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .modal3 .ReactModal__Content {
+    width: 88%;
+  }
+
+  .textBlock p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .clientRegistration .registrationImageBlock img {
+    width: 330px;
+    height: 170px;
+  }
+  .clientRegistration .registrationInputsBlock .registrationTextInputs {
+    width: 330px;
+  }
+  .textBlock p {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,371 @@
+.clientLogin {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .backBlock {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+
+  .loginImageBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    img {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+
+  .loginInputsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      color: red;
+      margin-top: 15px;
+    }
+
+    .loginTextInputs {
+      width: 505px;
+      height: 45px;
+      margin-top: 30px;
+      border: none;
+      outline: none;
+      box-shadow: 5px 0 9px 8px #ececec;
+      border-radius: 6px;
+      padding-left: 10px;
+      font-size: 17px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    color: red;
+    height: 0;
+  }
+
+  .forgot {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 45px 0;
+    color: #ef795a;
+  }
+
+  .signBlock {
+    width: 52%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #ef795a;
+    }
+
+    span {
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    button {
+      width: 155px;
+      height: 60px;
+      background: #ef795a;
+      color: #FEFFFF;
+      cursor: pointer;
+      border: none;
+      font-size: 22px;
+      border-radius: 10px;
+    }
+
+    button:active {
+      background: #FEFFFF;
+      color: #ef795a;
+      box-shadow: 1px 2px 2px 2px;
+    }
+  }
+
+  .iconsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+  }
+
+  button {
+    margin-right: 20px;
+  }
+}
+
+.modal2 {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  z-index: 999;
+
+  .ReactModal__Content {
+    transform: translate(-50%, -50%);
+    border: 1px !important;
+    width: 55%;
+    height: 35%;
+    padding: 0 !important;
+    top: 50% !important;
+    left: 50% !important;
+  }
+}
+
+.forgotBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  h3{
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #ef795a;
+  }
+
+  .emailLabel{
+    width: 65%;
+    font-size: 18px;
+  }
+
+  input {
+    width: 370px;
+    height: 55px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 5px 0 9px 8px #ececec;
+    border-radius: 6px;
+    padding-left: 14px;
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 14px;
+    color: red;
+    height: 0;
+  }
+
+  button {
+    width: 135px;
+    height: 55px;
+    background: #ef795a;
+    color: #FEFFFF;
+    cursor: pointer;
+    border: none;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-top: 22px;
+  }
+
+  button:active {
+    background: #FEFFFF;
+    color: #ef795a;
+    box-shadow: 1px 2px 2px 2px;
+  }
+}
+
+.closeModalOne {
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid #DB5A19;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  cursor: pointer;
+  background: #ef795a;
+}
+
+.closeModalOne:active {
+  background: #DB5A19;
+}
+
+.modalTextBlock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  .modalText {
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+
+  .closeModalText {
+    width: 155px;
+    height: 60px;
+    background: #ef795a;
+    color: #FEFFFF;
+    cursor: pointer;
+    border: none;
+    font-size: 22px;
+    border-radius: 10px;
+  }
+
+  .closeModalText:active {
+    background: #FEFFFF;
+    color: #ef795a;
+    box-shadow: 1px 2px 2px 2px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modalTextBlock .modalText {
+    font-size: 20px;
+  }
+
+  .clientLogin {
+    height: auto;
+  }
+  .clientLogin .loginImageBlock img {
+    width: 440px;
+    height: 250px;
+  }
+  .clientLogin .loginInputsBlock .loginTextInputs {
+    width: 445px;
+  }
+  .clientLogin .forgot {
+    font-size: 18px;
+  }
+  .clientLogin .signBlock span {
+    font-size: 18px;
+  }
+  .clientLogin .signBlock button {
+    width: 100px;
+    height: 46px;
+    font-size: 20px;
+    margin-left: 25px;
+  }
+  .forgotBlock input {
+    width: 300px;
+    height: 50px;
+  }
+  .closeModalOne {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .forgotBlock button {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .modalTextBlock .modalText {
+    font-size: 18px;
+  }
+
+  .modalTextBlock .closeModalText {
+    width: 140px;
+    height: 50px;
+  }
+
+  .clientLogin .loginImageBlock img {
+    width: 400px;
+    height: 200px;
+  }
+  .clientLogin .loginInputsBlock .loginTextInputs {
+    width: 400px;
+  }
+  .clientLogin .signBlock {
+    width: 71%;
+  }
+  .modal2 .ReactModal__Content {
+    width: 70%;
+  }
+  .forgotBlock input {
+    width: 270px;
+  }
+  .forgotBlock button {
+    width: 110px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .modalTextBlock .modalText {
+    font-size: 16px;
+  }
+
+  .modalTextBlock .closeModalText {
+    width: 125px;
+    height: 45px;
+  }
+
+  .clientLogin {
+    height: 100vh;
+  }
+  .clientLogin .loginImageBlock img {
+    width: 355px;
+    height: 170px;
+  }
+  .clientLogin .loginInputsBlock .loginTextInputs {
+    width: 355px;
+  }
+  .clientLogin .signBlock {
+    width: 82%;
+  }
+  .clientLogin .forgot {
+    font-size: 16px;
+  }
+  .clientLogin .signBlock span {
+    font-size: 16px;
+  }
+  .clientLogin .signBlock button {
+    width: 73px;
+    height: 42px;
+    font-size: 16px;
+  }
+  .clientLogin .signBlock a {
+    font-size: 16px;
+  }
+  .modal2 .ReactModal__Content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .clientLogin .loginImageBlock img {
+    width: 320px;
+    height: 140px;
+    margin-top: 15px;
+  }
+  .clientLogin .loginInputsBlock .loginTextInputs {
+    width: 320px;
+  }
+  .clientLogin .signBlock button {
+    margin-left: 0;
+  }
+  .clientLogin .signBlock {
+    width: 95%;
+    margin-left: 12px;
+  }
+  .modal2 .ReactModal__Content {
+    width: 87%;
+  }
+}

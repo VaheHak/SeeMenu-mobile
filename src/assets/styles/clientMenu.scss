@@ -1,0 +1,1429 @@
+#root {
+  background: #fcfcfc;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.header__menu_row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .backBlock {
+    width: 25%;
+
+    .back__row {
+      margin-left: 65px;
+      border-radius: 50%;
+      background: #ececec;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 2px 2px 5px grey;
+    }
+  }
+}
+
+.arrowBack {
+  font-size: 2rem !important;
+  color: #242422;
+}
+
+.searchBlock {
+  width: 49%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  input {
+    position: absolute;
+    height: 50px;
+    background: #fff;
+    box-shadow: 5px 0 9px 8px #ececec;
+    width: 50%;
+    border: none;
+    border-radius: 30px;
+    padding-left: 40px;
+    outline: none;
+  }
+}
+
+.search {
+  position: relative;
+  font-size: 20px;
+  color: #777;
+  left: -46%;
+}
+
+.filterBlock {
+  position: relative;
+  right: -125px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 25%;
+
+
+  span {
+    font-size: 25px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Lato", sans-serif;
+  }
+
+  .filterIcon {
+    margin-right: 10px;
+    color: #0a0909;
+    font-size: 32px;
+    transform: rotate(90deg);
+  }
+}
+
+.filtersEmpty {
+  width: 373px;
+  height: 383px;
+  background: #fcfcfc;
+  position: fixed;
+  left: 61%;
+  top: 34%;
+  transform: translateX(0);
+  transition: all 0.4s;
+  display: block;
+  box-shadow: -18px 25px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+  &.closFilter {
+    transform: translateX(430px);
+    z-index: 1;
+  }
+
+  .closeFilter {
+    color: #000000;
+    width: 35px;
+    height: 35px;
+    margin: 8px;
+  }
+
+  .filtersText {
+    font-size: 26px;
+    margin-left: 90px;
+  }
+}
+
+.veganText {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 8px;
+}
+
+.menu__cate {
+  width: 100%;
+  background: #fcfcfc;
+  padding: 35px 0;
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 21px;
+      background: #EAEAEA;
+      border-radius: 40px;
+
+
+      a {
+        position: static;
+        left: 20px;
+        top: 10px;
+        font-family: Roboto sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        color: #000000;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        text-decoration: none;
+        padding: 14px 33px;
+        border-radius: 40px;
+      }
+
+      .active {
+        background: #FF6838;
+        color: #fff;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+
+.menuBurgerEmpty {
+  width: 370px;
+  background: #ffffff;
+  position: fixed;
+  left: 67%;
+  top: 0;
+  transition: all 0.4s;
+  box-shadow: 5px 0 9px 8px #ececec;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateX(0);
+  z-index: 2000;
+
+  &.closing {
+    transform: translateX(360px);
+    z-index: 2;
+  }
+
+
+  div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 30%;
+    left: 8%;
+
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      color: black;
+      padding: 10px;
+      transition: all 0.4s;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
+
+.closeModal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99999;
+  top: 5%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+
+  .closeMenu {
+    color: #000000 !important;
+    width: 35px !important;
+    height: 35px !important;
+    margin: 8px;
+  }
+}
+
+.restaurantBlock {
+  width: 100%;
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+
+  .restaurantLogo {
+    p {
+      margin-top: 15px;
+      font-size: 24px;
+    }
+  }
+
+  .restaurantText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      font-size: 35px;
+      color: black;
+      font-weight: 700;
+    }
+
+    img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      margin-left: 20px;
+    }
+  }
+}
+
+.priceTitle {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 3px !important;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  width: 100%;
+  background: #fcfcfc;
+  height: 100%;
+
+  ul {
+    width: 95%;
+    margin: 0 auto;
+
+    li {
+      display: flex;
+      background: #ffffff;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 5px 0 9px 8px #ececec;
+      margin-bottom: 15px;
+      padding: 20px;
+      list-style: none;
+
+      .menu__text_block {
+        display: flex;
+        width: 80%;
+
+        img {
+          width: 35%;
+          height: 175px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+
+        div {
+          margin-left: 20px;
+
+          .menu__title {
+            font-size: 20px;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 23.44px;
+            margin-bottom: 15px;
+            margin-left: 40px;
+          }
+
+          .menu__text {
+            color: #606060;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 16.41px;
+            margin-bottom: 15px;
+            margin-left: 40px;
+          }
+
+          .priceInfoBlock {
+            display: flex;
+            width: 65%;
+            justify-content: space-between;
+            margin-top: 12px;
+
+            .priceBlock {
+              display: flex;
+              flex-direction: column;
+
+              .price__title {
+                font-weight: 500;
+                font-style: normal;
+                line-height: 18.75px;
+                color: #606060;
+              }
+
+              .menu__price {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21.09px;
+                color: #FF6838;
+                margin-top: 5px;
+              }
+            }
+
+            .vegan__Block {
+              display: flex;
+              flex-direction: column;
+
+              .vegan__title {
+                font-weight: 500;
+                font-style: normal;
+                line-height: 18.75px;
+                color: #606060;
+              }
+
+              .menu__vegan {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21.09px;
+                margin-top: 5px;
+                color: #FF6838;
+              }
+            }
+          }
+        }
+      }
+
+      .iconCart {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .MuiSvgIcon-root {
+          color: #FF6838;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+//.sizeBlock {
+//  display: flex;
+//  width: 65%;
+//  justify-content: space-between;
+//  margin-top: 25px;
+//
+//  .item_size {
+//    font-weight: 500;
+//    font-style: normal;
+//    font-size: 13px;
+//    line-height: 15.23px;
+//    border-radius: 50px;
+//    padding: 10px;
+//    border: 1px solid #D9D9D9;
+//
+//    &.active {
+//      background-color: #FF6838;
+//      color: white;
+//      border: none;
+//    }
+//  }
+//}
+//}
+
+//.countBlock {
+//  width: 40%;
+//  display: flex;
+//  flex-direction: column-reverse;
+//
+//  .countBlockRow {
+//    display: flex;
+//
+//    .countControlBlock {
+//      display: flex;
+//
+//      .minusButton {
+//        background-color: #ECECEC;
+//        border-radius: 50px;
+//        font-size: 35px;
+//        padding: 12px;
+//      }
+//
+//      .countInput {
+//        font-style: normal;
+//        font-weight: bold;
+//        font-size: 16px;
+//        line-height: 19px;
+//        outline: none;
+//        border: none;
+//        width: 30px;
+//        text-align: center;
+//      }
+//
+//      .plusButton {
+//        background-color: #FF6838;
+//        border-radius: 50px;
+//        font-size: 35px;
+//        color: white;
+//        padding: 10px;
+//      }
+//    }
+//
+//    .orderButton {
+//      background-color: #FF6838;
+//      border-radius: 40px;
+//      border: none;
+//      color: white;
+//      font-style: normal;
+//      font-weight: bold;
+//      font-size: 14px;
+//      line-height: 16px;
+//      padding: 0 20px;
+//      margin-left: 20px;
+//    }
+//  }
+//}
+//}
+//}
+//}
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+
+.menu-item-wrapper.active {
+  border: 1px #F2BD57 solid;
+  background: #F2BD57;
+  border-radius: 8px;
+}
+
+
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}
+
+
+.modal {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  z-index: 999;
+
+  .ReactModal__Content {
+    transform: translate(-50%, -50%);
+    border: none !important;
+    width: 95%;
+    height: auto;
+    inset: unset !important;
+    top: 50% !important;
+    left: 50% !important;
+    border-radius: 15px !important;
+    overflow-x: hidden !important;
+    display: flex;
+
+    .close__modal {
+      position: absolute;
+      right: 3px;
+      cursor: pointer;
+      color: black;
+      font-size: 25px !important;
+      top: 3px;
+    }
+
+    .menu__figure {
+      height: 100%;
+      width: 30%;
+      border-radius: 10px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      div {
+        position: absolute;
+        top: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .MuiSvgIcon-root {
+          color: white;
+          font-size: 35px;
+        }
+      }
+    }
+
+    .menuitem__block {
+      width: 36%;
+      letter-spacing: 1px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 45px;
+      margin-left: 25px;
+
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        line-height: 23px;
+        color: #000000;
+      }
+
+      p {
+        font-size: 14px;
+        color: #191b1d94;
+        font-family: "Lato", sans-serif;
+        font-style: normal;
+        margin: 15px 0;
+        font-weight: normal;
+        line-height: 16px;
+      }
+
+      .menu__item_block_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+
+        .price__block {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font-style: normal;
+            color: #191b1d;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            opacity: 0.5;
+          }
+
+          strong {
+            color: #FF6838;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+
+          }
+        }
+
+        .vegan__block {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            color: #191b1d;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            opacity: 0.5;
+          }
+
+          h5 {
+            color: black;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+          }
+        }
+      }
+
+      .sizeBlock {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+          position: absolute;
+          left: -9999px;
+        }
+
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label {
+          position: relative;
+          padding-left: 28px;
+          cursor: pointer;
+          line-height: 20px;
+          display: inline-block;
+          color: #666;
+          margin-bottom: 15px;
+        }
+
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #ff6838;
+          border-radius: 100%;
+          background: #fff;
+        }
+
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+          content: '';
+          width: 14px;
+          height: 14px;
+          background: #ff6838;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border-radius: 100%;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+        }
+
+        [type="radio"]:not(:checked) + label:after {
+          opacity: 0;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        [type="radio"]:checked + label:after {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    }
+
+    .countBlock {
+      width: 1%;
+
+      .countBlockRow {
+
+        .countControlBlock {
+          display: flex;
+          margin-left: 80px;
+
+          .minusButton {
+            background-color: #ECECEC;
+            border-radius: 50px;
+            font-size: 35px;
+            padding: 12px;
+          }
+
+          .countInput {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            outline: none;
+            border: none;
+            width: 30px;
+            text-align: center;
+          }
+
+          .plusButton {
+            background-color: #FF6838;
+            border-radius: 50px;
+            font-size: 35px;
+            color: white;
+            padding: 10px;
+          }
+        }
+
+        .orderButton {
+          background-color: #FF6838;
+          border-radius: 40px;
+          border: none;
+          color: white;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 16px;
+          width: 260px;
+          height: 50px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.veganBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28%;
+  margin-left: 30px;
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  span {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+
+  input[type='radio']:after {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+
+  }
+
+  input[type='radio']:checked:after {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ff6838;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #FF6838;
+  }
+
+  .apply {
+    width: 320px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #FF6838;
+    box-sizing: border-box;
+    border-radius: 40px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    margin-top: 15px;
+  }
+
+  .apply:active {
+    background: #FF6838;
+  }
+}
+
+.priceFilter {
+  width: 80%;
+  height: 40px;
+  margin: 40px auto;
+
+  .filterInputs {
+    display: flex;
+    justify-content: center;
+
+    input {
+      width: 156px;
+      height: 42px;
+      background: #F8F8F8;
+      border: 1px solid #E3E3E3;
+      box-sizing: border-box;
+      border-radius: 130px;
+      margin-left: 10px;
+      outline: none;
+    }
+  }
+}
+
+.MuiSwitch-root {
+  width: 80px !important;
+  height: 39px !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked {
+  transform: translateX(40px) !important;
+}
+
+.MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+  background-color: black !important;
+}
+
+.WithStyles\(ForwardRef\(Slider\)\)-root-1 {
+  color: #34403aa3 !important;
+}
+
+.MuiSwitch-colorSecondary.Mui-checked {
+  color: #DB5A19 !important;
+}
+
+.WithStyles\(ForwardRef\(Slider\)\)-thumb-2 {
+  border: 2px solid #DB5A19 !important;
+  background-color: #DB5A19 !important;
+}
+
+.css-yk16xz-control {
+  background-color: #fcfcfc !important;
+  border-color: #cccccc00 !important;
+}
+
+.MuiSlider-thumb {
+  width: 20px !important;
+  height: 20px !important;
+  color: #FF6838 !important;
+  margin-top: -7px !important;
+}
+
+.MuiSlider-root {
+  color: #FF6838 !important;
+}
+
+.MuiSlider-track {
+  height: 6px !important;
+}
+
+.modal4 {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  z-index: 999;
+
+  .ReactModal__Content {
+    transform: translate(-50%, -50%);
+    border: none !important;
+    width: 65%;
+    height: auto;
+    top: 50% !important;
+    left: 50% !important;
+    border-radius: 15px !important;
+    overflow-x: hidden !important;
+
+    img {
+      width: 350px;
+      height: 300px;
+      object-fit: cover;
+      margin-left: 21%;
+    }
+
+    .slick-prev, .slick-next {
+      background: #d7d0cd;
+      top: 64%;
+      width: 35px;
+      height: 35px;
+    }
+
+    .slick-next {
+      right: -8px;
+    }
+  }
+
+  div {
+    .MuiSvgIcon-root {
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    img {
+      height: 150px !important;
+    }
+
+    .menu__text_block {
+      .menu__title {
+        font-size: 18px !important;
+        line-height: 20.44px !important;
+      }
+
+      .menu__text {
+        line-height: 14.41px !important;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .menu__cate ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 7px;
+  }
+
+  .menu__cate {
+    width: 100%;
+    background: #fcfcfc;
+  }
+
+  .restaurantBlock .restaurantText img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .restaurantBlock .restaurantText h4 {
+    font-size: 30px;
+  }
+
+  .header__menu_row .backBlock .back__row {
+    margin-left: 45px;
+  }
+
+  .close__modal {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .filtersEmpty {
+    left: 54%;
+    top: 182px;
+    width: 340px;
+  }
+
+  .veganBlock .apply {
+    width: 290px;
+  }
+
+  .priceFilter .filterInputs input {
+    width: 145px;
+  }
+  .header__menu_row .backBlock .back__row {
+    width: 35px;
+    height: 35px;
+
+    .arrowBack {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  .menuBurgerEmpty {
+    width: 344px;
+    height: 100vh;
+    right: 0;
+    left: 56%;
+
+    div {
+      top: 32%;
+    }
+  }
+
+  .search {
+    left: -45%;
+  }
+
+  .modal {
+    .ReactModal__Content {
+      padding: 10px !important;
+
+      .menu__figure {
+        width: 50%;
+        height: 180px;
+
+        img {
+          height: 80%;
+        }
+      }
+
+      .menuitem__block {
+        width: 85%;
+        margin-top: 30px;
+        padding: 0 25px;
+        margin-left: 0;
+
+        h4 {
+          font-size: 18px;
+          line-height: 10px;
+        }
+
+        p {
+          line-height: 14px;
+          font-size: 12px;
+        }
+
+        .menu__item_block_row {
+          width: 85%;
+        }
+      }
+
+      .countBlock {
+        width: 52%;
+      }
+    }
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .orderButton {
+    width: 240px;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .countControlBlock {
+    margin-left: 70px;
+  }
+  .modal4 .ReactModal__Content img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    margin-left: 17%;
+  }
+  .modal4 .ReactModal__Content .slick-prev, .modal4 .ReactModal__Content .slick-next {
+    background: #d7d0cd;
+    top: 55%;
+    width: 35px;
+    height: 35px;
+  }
+  .slick-prev {
+    left: -8px;
+  }
+  .modal .ReactModal__Content .menu__figure div {
+    position: absolute;
+    top: 11px;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+
+  .modal {
+
+    .ReactModal__Content {
+      width: 100%;
+      top: 30% !important;
+      left: 0 !important;
+      height: 100%;
+      transform: translateY(0);
+      transition: all 0.4s;
+      border-radius: 15px 15px 0 0 !important;
+      flex-direction: column;
+      overflow: scroll;
+
+      .close__modal {
+        display: none;
+      }
+
+      .menu__figure {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 23px;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .menuitem__block {
+        width: 90%;
+      }
+    }
+  }
+
+  .restaurantText {
+    display: none !important;
+  }
+
+  .restaurantLogo {
+    display: none;
+  }
+
+  .restaurantBlock {
+    margin: 50px auto;
+  }
+
+  .search {
+    position: relative;
+    font-size: 20px;
+    color: #777;
+    left: -43%;
+  }
+
+  .filterBlock .filterIcon {
+    margin-left: -50px;
+  }
+
+  .header__menu_row .backBlock .back__row {
+    margin-left: 30px;
+  }
+
+  .menuBurgerEmpty {
+    width: 355px;
+    height: 100vh;
+    left: 37%;
+
+    div {
+      top: 37%;
+    }
+  }
+
+  .menu ul li .menu__text_block img {
+    width: 35%;
+  }
+
+  .menu ul li .menu__text_block div {
+    margin-left: 10px;
+
+    .menu__title, .menu__text {
+      margin-left: 20px;
+    }
+  }
+  .filtersEmpty {
+    left: 0;
+    top: 283px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    height: 410px;
+
+    &.closFilter {
+      transform: translateY(430px);
+    }
+  }
+
+  .veganBlock {
+    margin-top: 20%;
+    margin-left: 53px;
+  }
+
+  .priceFilter .filterInputs {
+    justify-content: space-around;
+
+    input {
+      padding-left: 10px;
+      width: 200px;
+    }
+  }
+
+  .logOut {
+    .MuiSvgIcon-root {
+      width: 30px;
+      height: 30px;
+    }
+
+    span {
+      font-size: 20px;
+      color: black;
+      padding: 10px;
+      transition: all 0.4s;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  .modal .ReactModal__Content .countBlock {
+    width: 45%;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .orderButton {
+    width: 280px;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .countControlBlock {
+    margin-left: 90px;
+  }
+  .modal4 .ReactModal__Content {
+    width: 80%;
+
+    img {
+      width: 280px;
+      height: 235px;
+      object-fit: cover;
+      margin-left: 16%;
+    }
+  }
+  .modal .ReactModal__Content .menu__figure div {
+    position: absolute;
+    top: 20px;
+    right: 26px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .menu ul div li {
+    padding: 10px 0;
+  }
+  .menu ul div li img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .menuitem__block {
+    width: 100%;
+    letter-spacing: 1px;
+    padding: 0 35px;
+  }
+  .filterBlock .filterIcon {
+    margin-left: -47px;
+  }
+
+  .menu ul li img {
+    height: 120px !important;
+  }
+
+  .restaurantBlock .restaurantText img {
+    width: 60px;
+    height: 60px;
+    margin-left: 45px;
+  }
+  .header__menu_row .backBlock .back__row {
+    margin-left: 10px;
+  }
+
+  .filterBlock {
+    right: -110px;
+  }
+
+  .menuBurgerEmpty {
+    width: 318px;
+    height: 100vh;
+    left: 25%;
+
+    div {
+      top: 30%;
+    }
+  }
+  .search {
+    left: -40%;
+  }
+
+  .menu ul li .menu__text_block .menu__title {
+    font-size: 16px !important;
+    line-height: 18.44px !important;
+    margin-bottom: 5px;
+  }
+
+  .menu ul li .menu__text_block div .menu__text {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .menu ul li .menu__text_block div .priceInfoBlock {
+    width: 77%;
+  }
+  .menu ul li .iconCart .MuiSvgIcon-root {
+    width: 30px;
+    height: 30px;
+  }
+  .veganBlock {
+    margin-top: 27%;
+    margin-left: 37px;
+  }
+  .modal .ReactModal__Content .menu__figure img {
+    height: 85%;
+  }
+  .modal .ReactModal__Content .menuitem__block {
+    margin-top: 0;
+
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+  .modal .ReactModal__Content .menuitem__block .menu__item_block_row .price__block
+  strong {
+    font-size: 16px;
+  }
+
+  .modal .ReactModal__Content .menuitem__block .menu__item_block_row .vegan__block h5 {
+    font-size: 16px;
+  }
+  .modal .ReactModal__Content .menuitem__block .menu__item_block_row {
+    width: 65%;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .orderButton {
+    width: 180px;
+  }
+  .modal .ReactModal__Content .countBlock {
+    width: 35%;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .countControlBlock {
+    margin-left: 38px;
+  }
+  .modal4 .ReactModal__Content {
+    width: 95%;
+
+    img {
+      width: 260px;
+      height: 230px;
+      object-fit: cover;
+      margin-left: 14%;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .priceFilter .filterInputs input {
+    width: 148px;
+  }
+
+  .filterBlock .filterIcon {
+    margin-left: -58px;
+  }
+  .restaurantBlock .restaurantLogo p {
+    font-size: 20px;
+  }
+
+  .menuBurgerEmpty {
+    width: 289px;
+    height: 100vh;
+    left: 23%;
+
+    div {
+      top: 26%;
+    }
+  }
+  .search {
+    left: -39%;
+  }
+
+  .menu ul li .menu__text_block div .priceInfoBlock {
+    width: 90%;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .orderButton {
+    width: 140px;
+    height: 45px;
+    font-size: 14px;
+  }
+  .modal .ReactModal__Content .countBlock {
+    width: 28%;
+  }
+  .modal .ReactModal__Content .countBlock .countBlockRow .countControlBlock {
+    margin-left: 24px;
+  }
+  .modal4 .ReactModal__Content {
+    img {
+      width: 235px;
+      height: 220px;
+      object-fit: cover;
+      margin-left: 13%;
+    }
+  }
+  .modal4 .ReactModal__Content .slick-prev, .modal4 .ReactModal__Content .slick-next {
+    top: 64%;
+  }
+}
